@@ -2627,3 +2627,15 @@ Completed 404 Not Found in 24ms (ActiveRecord: 1.9ms)
 ActiveRecord::RecordNotFound (Couldn't find Author with 'id'=1):
   
 app/controllers/authors_controller.rb:4:in `posts_index'
+Started GET "/authors/2/posts" for 93.41.127.250 at 2019-06-27 11:29:45 +0000
+Cannot render console from 93.41.127.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AuthorsController#posts_index as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Author with 'id'=2):
+  
+app/controllers/authors_controller.rb:4:in `posts_index'
